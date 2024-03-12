@@ -1,0 +1,1 @@
+(function(n="app:scroll-to"){window.addEventListener(n,o=>{var e;o.stopPropagation();const r=(e=o==null?void 0:o.detail)==null?void 0:e.query;if(!r)return;const t=document.querySelector(r);if(t)try{t.scrollIntoView({behavior:"smooth"})}catch(l){console.error("Error scrolling to element:",l)}},!1)})();
