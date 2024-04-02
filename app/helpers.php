@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Fluent;
+
 if (! function_exists('social_profile_url')) {
     function social_profile_url($network, $profileName): string
     {
@@ -21,5 +23,28 @@ if (! function_exists('social_profile_url')) {
             'github' => 'https://github.com/' . $profileName,
             default => 'Social network not supported.'
         };
+    }
+}
+
+if (! function_exists('fluent')) {
+    /**
+     * Create a new Fluent instance.
+     *
+     * Example Usage:
+     * ❌ collect($data)->get('user');
+     * ✅ fluent($data)->user;
+     *
+     * ❌ collect($data)->get('user')[' name'];
+     * ✅ fluent($data)->get('user.name');
+     *
+     * ❌ collect(collect($data)->get('posts'))→>pluck('title');
+     * ✅ fluent($data)->collect('posts')->pluck('title');
+     *
+     * ❌ json_encode(collect($data)->get('user')['address']);
+     * ✅fluent($data)->scope('user.address')->toJon();
+     */
+    function fluent(?array $data = null): Fluent
+    {
+        return new Fluent($data);
     }
 }
