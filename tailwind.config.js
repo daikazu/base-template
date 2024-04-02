@@ -7,7 +7,7 @@ import aspectRatio from "@tailwindcss/aspect-ratio"; // https://github.com/tailw
 import containerQueries from "@tailwindcss/container-queries"; // https://github.com/tailwindlabs/tailwindcss-container-queries
 import debugScreens from "tailwindcss-debug-screens"; // https://github.com/jorenvanhee/tailwindcss-debug-screens
 import maskImage from "@pyncz/tailwind-mask-image"; //https://github.com/pyncz/tailwind-mask-image
-import { rem, em, hexToRgb } from "./resources/js/helpers";
+import { rem, em, hexToRgb } from "./helpers";
 
 const customColors = {};
 
